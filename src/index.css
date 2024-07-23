@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  /* font-family: 'Pacifico', cursive;  */
+  font-family: "Ubuntu";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +13,62 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.task {
+  border: 2px solid black;
+  padding: 10px 25px;
+  text-align: center;
+}
+
+.taskList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.side-menu {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background: #4588ec;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 15%;
+  height: 100%;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.view-window {
+  width: 100%;
+  height: 40%;
+  overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 2px solid #4588ec;
+} 
+
+.view-window > * {
+  display: block;
+  min-height: 25px;
+  width: 100%;
+  height: 25px;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  background-color: #5997f5;
+  text-align: left;
+  margin-bottom: 2px;
+}
+
+.view-window > *:not(.view-window__select):hover {
+  background-color: #7aabf5;
+}
+
+.view-window__select {
+  background-color: #8db4ee;
 }
